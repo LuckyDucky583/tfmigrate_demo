@@ -1,4 +1,4 @@
-module "s3_bucket" {
+module "s3_bucket_1" {
   source  = "terraform-aws-modules/s3-bucket/aws"
   version = "v3.15.1"
 
@@ -10,7 +10,7 @@ module "s3_bucket" {
   }
 }
 
-module "s3_bucket" {
+module "s3_bucket_2" {
   source  = "terraform-aws-modules/s3-bucket/aws"
   version = "v3.15.1"
 
@@ -22,7 +22,7 @@ module "s3_bucket" {
   }
 }
 
-module "s3_bucket" {
+module "s3_bucket_3" {
   source  = "terraform-aws-modules/s3-bucket/aws"
   version = "v3.15.1"
 
@@ -34,7 +34,7 @@ module "s3_bucket" {
   }
 }
 
-module "s3_bucket" {
+module "s3_bucket_4" {
   source  = "terraform-aws-modules/s3-bucket/aws"
   version = "v3.15.1"
 
