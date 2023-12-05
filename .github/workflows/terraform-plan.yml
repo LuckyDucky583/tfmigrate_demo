@@ -1,0 +1,20 @@
+name: 'Terraform-pr-workflow'
+
+on:
+  pull_request:
+    branches:
+    - main
+    - dev
+    
+jobs:
+
+  test-docker:
+    uses: LuckyDucky583/terraform-github-actions/.github/workflows/.test-docker.yml@v1.1.1
+    with:
+      working-directory: ./code
+
+  terraform:
+    uses: LuckyDucky583/terraform-github-actions/.github/workflows/.terraform-aws-pull-request.yml@v1.1.1
+    with:
+      working-directory: ./terraform
+    secrets: inherit
