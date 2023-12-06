@@ -1,7 +1,4 @@
-module "s3_bucket_1" {
-  source  = "terraform-aws-modules/s3-bucket/aws"
-  version = "v3.15.1"
-
+resource "aws_s3_bucket" "bucket_1" {
   bucket = "tfmigrate-demo1-${random_string.random.result}"
 
   tags = {
@@ -10,10 +7,7 @@ module "s3_bucket_1" {
   }
 }
 
-module "s3_bucket_2" {
-  source  = "terraform-aws-modules/s3-bucket/aws"
-  version = "v3.15.1"
-
+resource "aws_s3_bucket" "bucket_2" {
   bucket = "tfmigrate-demo2-${random_string.random.result}"
 
   tags = {
@@ -22,10 +16,7 @@ module "s3_bucket_2" {
   }
 }
 
-module "s3_bucket_3" {
-  source  = "terraform-aws-modules/s3-bucket/aws"
-  version = "v3.15.1"
-
+resource "aws_s3_bucket" "bucket_3" {
   bucket = "tfmigrate-demo3-${random_string.random.result}"
 
   tags = {
@@ -34,10 +25,7 @@ module "s3_bucket_3" {
   }
 }
 
-module "s3_bucket_4" {
-  source  = "terraform-aws-modules/s3-bucket/aws"
-  version = "v3.15.1"
-
+resource "aws_s3_bucket" "bucket_4" {
   bucket = "tfmigrate-demo4-${random_string.random.result}"
 
   tags = {
@@ -46,10 +34,5 @@ module "s3_bucket_4" {
   }
 }
 
-resource "random_string" "random" {
-  length  = 5
-  special = false
-  upper   = false
-}
 
 
